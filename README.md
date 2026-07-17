@@ -59,37 +59,33 @@
 - <**사용 기술**> : Z3 Solver는 다양한 제약 조건 내에서 해의 존재 가능성 여부 판단 / 충돌 발생 시, UNSAT를 통하여 충돌 지점에 대한 언급
 - <**사용 추가 설명**> : Z3 Solver는 원래 해당 불리언 논리식을 참으로 만드는 변수 값의 조합이 존재하는 가를 다룸. 여기서 사용 방식은 SAT에 대한 것이 아닌 UNSAT 여부에 대한 정보를 판단하기 위하여 엔진으로서 사용
 - <**배경 정립**> - 온톨로지 구축 완료 상태 가정
-- <** 1 Layer **> 온톨로지 -> Z3 Solver Symbol 변환
+- <**1 Layer**> 온톨로지 -> Z3 Solver Symbol 변환
 정형화된 온톨로지를 판정 엔진이 다룰 수 있는 Symbol 집합으로 변환
 이 층의 목적 : 의미(온톨로지)를 논리(Symbol)로 옮겨 이후 제약 판정의 공통 입력 확보
 표현만 다른 동일 의미는 하나의 정규(canonical) 형태로 정렬 -> 뒤 층이 일관된 데이터만 다루도록 보장
-- <** 2 Layer **> Symbol Context 구성 + 모호성 필터링
+- <**2 Layer**> Symbol Context 구성 + 모호성 필터링
 변환된 Symbol을 판정 가능한 컨텍스트로 정렬
 이 지점에서 ambiguous(모호) / unknown(미지) 필드 분리 -> 인간이 정의하지 않은 영역을 판정 대상에서 격리
 격리 이유 : 정의되지 않은 부분을 억지 판정할 경우 앞서 언급한 환각 누적 구조로 회귀하기 때문
-- <** 3 Layer **> Hard Constraint 판정 (Z3 Solver)
+- <**3 Layer**> Hard Constraint 판정 (Z3 Solver)
 반드시 지켜져야 하는 규칙만 논리식으로 표현 -> Z3에 투입
 SAT가 아닌 UNSAT 여부를 신호로 사용 : 충돌 발생 시 UNSAT
 각 규칙에 rule id 부착(tracked) -> 어떤 규칙이 충돌을 유발했는지 역추적 가능
 의미 : "안 됨"으로 끝나지 않고 "무엇 때문에 안 됨"까지 특정
-- <** 4 Layer **> Soft Conflict 판정 (Set Diff)
+- <**4 Layer**> Soft Conflict 판정 (Set Diff)
 절대 규칙이 아닌 정도의 문제는 Z3가 아니라 집합 연산으로 처리
 근거 기준선(evidence baseline)과 현재 Symbol 집합의 차이(diff) 계산
 LLM 판단 배제 -> 결정론적 연산으로만 충돌 도출 (주관 개입 차단)
-- <** 5 Layer **> Status Decision (종합 판정)
+- <**5 Layer**> Status Decision (종합 판정)
 Hard 결과(UNSAT/SAT) + Soft diff 결과를 하나의 상태로 수렴
 서로 성격이 다른 두 신호를 최종 판정 하나로 결합하는 지점
-- <** 6 Layer **> Report 산출
+- <**6 Layer**> Report 산출
 판정 결과를 마케터가 읽을 수 있는 형태로 출력 (Markdown / JSON 선택)
 전 단계 산출물은 debug로 분리 저장 -> 최종 결과는 불변, 판정 근거만 추적 가능
-- <** 설계 관통 원칙 **>
+- <**설계 관통 원칙**>
 해석은 LLM, 규칙 정립은 인간 -> 층을 명확히 분리
 Hard는 Z3로 엄밀히 / Soft는 diff로 유연히 -> 성격 다른 판정을 다른 엔진에 위임
 예측·랭킹·LLM 판단 배제 + rule id 추적 -> 모든 판정이 설명 가능(explainable)
-
-
-이제 <배경 정립> 아래부터 전체 레이어가 같은 톤으로 이어져. 더 손볼 부분 있으면 말해줘.
-Claude는 AI이며 실수할 수 있습니다. 응답을 다
 
 
 
