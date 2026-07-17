@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Meditherapy KR Seeding Baseline",
+    "objective": "Validate baseline influencer seeding plan."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["roas", "purchase_conversion"],
+  "measurement": {
+    "tracking_link": true,
+    "coupon_code": false,
+    "purchase_event": true
+  },
+  "budget": {
+    "limit": 10000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 8000000,
+  "is_experiment_plan": false,
+  "experiment_hypothesis": ""
+}

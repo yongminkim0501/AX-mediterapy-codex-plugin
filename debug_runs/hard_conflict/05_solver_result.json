@@ -1,0 +1,138 @@
+{
+  "engine": "z3",
+  "used_assert_and_track": true,
+  "overall_result": "unsat",
+  "unsat_core_ids": [
+    "HC_EXPERIMENT_HYPOTHESIS_REQUIRED",
+    "HC_PLANNED_COST_WITHIN_BUDGET",
+    "HC_PURCHASE_EVENT_REQUIRED",
+    "HC_ROAS_MEASUREMENT_REQUIRED"
+  ],
+  "violations": [
+    {
+      "id": "HC_ROAS_MEASUREMENT_REQUIRED",
+      "severity": "blocked",
+      "message": "ROAS KPI requires a tracking link or coupon code.",
+      "suggested_fix": "Add measurement.tracking_link=true or measurement.coupon_code=true.",
+      "observed_fields": [
+        "kpis",
+        "measurement.tracking_link",
+        "measurement.coupon_code"
+      ],
+      "observed_values": {
+        "kpis": [
+          "roas",
+          "purchase_conversion"
+        ],
+        "measurement.tracking_link": false,
+        "measurement.coupon_code": false
+      },
+      "unsat_core": [
+        "HC_ROAS_MEASUREMENT_REQUIRED"
+      ]
+    },
+    {
+      "id": "HC_PURCHASE_EVENT_REQUIRED",
+      "severity": "blocked",
+      "message": "purchase_conversion KPI requires purchase event measurement.",
+      "suggested_fix": "Add measurement.purchase_event=true.",
+      "observed_fields": [
+        "kpis",
+        "measurement.purchase_event"
+      ],
+      "observed_values": {
+        "kpis": [
+          "roas",
+          "purchase_conversion"
+        ],
+        "measurement.purchase_event": false
+      },
+      "unsat_core": [
+        "HC_PURCHASE_EVENT_REQUIRED"
+      ]
+    },
+    {
+      "id": "HC_PLANNED_COST_WITHIN_BUDGET",
+      "severity": "blocked",
+      "message": "Planned cost must be less than or equal to budget limit when both are provided.",
+      "suggested_fix": "Lower planned_cost or increase budget.limit.",
+      "observed_fields": [
+        "planned_cost",
+        "budget.limit"
+      ],
+      "observed_values": {
+        "planned_cost": 9000000,
+        "budget.limit": 5000000
+      },
+      "unsat_core": [
+        "HC_PLANNED_COST_WITHIN_BUDGET"
+      ]
+    },
+    {
+      "id": "HC_EXPERIMENT_HYPOTHESIS_REQUIRED",
+      "severity": "revise",
+      "message": "Experiment plans require a non-empty experiment hypothesis.",
+      "suggested_fix": "Add a concrete experiment_hypothesis.",
+      "observed_fields": [
+        "is_experiment_plan",
+        "experiment_hypothesis"
+      ],
+      "observed_values": {
+        "is_experiment_plan": true,
+        "experiment_hypothesis": ""
+      },
+      "unsat_core": [
+        "HC_EXPERIMENT_HYPOTHESIS_REQUIRED"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "HC_ROAS_MEASUREMENT_REQUIRED",
+      "solver_result": "unsat",
+      "unsat_core": [
+        "HC_ROAS_MEASUREMENT_REQUIRED"
+      ],
+      "evaluation": {
+        "has_roas_kpi": true,
+        "has_tracking_link": false,
+        "has_coupon_code": false
+      }
+    },
+    {
+      "id": "HC_PURCHASE_EVENT_REQUIRED",
+      "solver_result": "unsat",
+      "unsat_core": [
+        "HC_PURCHASE_EVENT_REQUIRED"
+      ],
+      "evaluation": {
+        "has_purchase_conversion_kpi": true,
+        "has_purchase_event": false
+      }
+    },
+    {
+      "id": "HC_PLANNED_COST_WITHIN_BUDGET",
+      "solver_result": "unsat",
+      "unsat_core": [
+        "HC_PLANNED_COST_WITHIN_BUDGET"
+      ],
+      "evaluation": {
+        "planned_cost": 9000000,
+        "budget_limit": 5000000,
+        "both_exist": true,
+        "within_budget": false
+      }
+    },
+    {
+      "id": "HC_EXPERIMENT_HYPOTHESIS_REQUIRED",
+      "solver_result": "unsat",
+      "unsat_core": [
+        "HC_EXPERIMENT_HYPOTHESIS_REQUIRED"
+      ],
+      "evaluation": {
+        "is_experiment_plan": true,
+        "has_experiment_hypothesis": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "campaign": {
+    "name": "Scenario 04 - Strict script",
+    "objective": "Use a strict brand script instead of creator-owned language."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "message_control": "strict_script",
+  "kpis": ["purchase_conversion"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": true
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "Strict script may improve message consistency without hurting conversion."
+}

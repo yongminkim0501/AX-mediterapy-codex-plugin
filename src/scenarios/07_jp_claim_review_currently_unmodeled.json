@@ -1,0 +1,26 @@
+{
+  "campaign": {
+    "name": "Scenario 07 - JP strong claim review",
+    "objective": "Run JP campaign with strong before-after efficacy claim."
+  },
+  "market": "JP",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "product_claim": "strong_before_after_effect",
+  "regulatory_review": false,
+  "kpis": ["ROAS"],
+  "measurement": {
+    "tracking_link": true,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "JP audience may respond to before-after product proof."
+}

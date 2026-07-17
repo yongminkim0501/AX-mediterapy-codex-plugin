@@ -1,0 +1,32 @@
+{
+  "atomic_symbols": [
+    "age_group=20s",
+    "gender=female",
+    "market=KR",
+    "kpi=roas",
+    "kpi=purchase_conversion",
+    "measurement.coupon_code=False",
+    "measurement.purchase_event=False",
+    "measurement.tracking_link=False",
+    "budget.limit=5000000",
+    "planned_cost=9000000"
+  ],
+  "composite_symbols": [
+    {
+      "symbol": "audience_segment=KR:female:20s",
+      "derived_from": [
+        "market=KR",
+        "gender=female",
+        "age_group=20s"
+      ],
+      "note": "Composite-on-demand; not stored as an independent fact."
+    }
+  ],
+  "soft_symbol_set": {
+    "market": "KR",
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "ambiguous_fields": [],
+  "unknown_fields": []
+}

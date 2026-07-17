@@ -1,0 +1,23 @@
+{
+  "baseline_id": "kr-female-20s-demo-baseline",
+  "baseline_symbol_set": {
+    "market": "KR",
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "plan_symbol_set": {
+    "market": "KR",
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "same": [
+    "market",
+    "gender",
+    "age_group"
+  ],
+  "changed": [],
+  "missing_in_plan": [],
+  "missing_in_baseline": [],
+  "classification": "Pass",
+  "question": null
+}

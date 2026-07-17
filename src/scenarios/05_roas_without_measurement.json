@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Scenario 05 - ROAS without measurement",
+    "objective": "Set ROAS as KPI without tracking link or coupon code."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["ROAS"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2000000,
+  "is_experiment_plan": false,
+  "experiment_hypothesis": ""
+}

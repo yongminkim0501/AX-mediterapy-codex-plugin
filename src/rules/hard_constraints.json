@@ -1,0 +1,36 @@
+{
+  "constraints": [
+    {
+      "id": "HC_ROAS_MEASUREMENT_REQUIRED",
+      "severity": "blocked",
+      "message": "ROAS KPI requires a tracking link or coupon code.",
+      "suggested_fix": "Add measurement.tracking_link=true or measurement.coupon_code=true.",
+      "observed_fields": ["kpis", "measurement.tracking_link", "measurement.coupon_code"],
+      "type": "roas_requires_tracking_or_coupon"
+    },
+    {
+      "id": "HC_PURCHASE_EVENT_REQUIRED",
+      "severity": "blocked",
+      "message": "purchase_conversion KPI requires purchase event measurement.",
+      "suggested_fix": "Add measurement.purchase_event=true.",
+      "observed_fields": ["kpis", "measurement.purchase_event"],
+      "type": "purchase_conversion_requires_purchase_event"
+    },
+    {
+      "id": "HC_PLANNED_COST_WITHIN_BUDGET",
+      "severity": "blocked",
+      "message": "Planned cost must be less than or equal to budget limit when both are provided.",
+      "suggested_fix": "Lower planned_cost or increase budget.limit.",
+      "observed_fields": ["planned_cost", "budget.limit"],
+      "type": "planned_cost_lte_budget_limit"
+    },
+    {
+      "id": "HC_EXPERIMENT_HYPOTHESIS_REQUIRED",
+      "severity": "revise",
+      "message": "Experiment plans require a non-empty experiment hypothesis.",
+      "suggested_fix": "Add a concrete experiment_hypothesis.",
+      "observed_fields": ["is_experiment_plan", "experiment_hypothesis"],
+      "type": "experiment_requires_hypothesis"
+    }
+  ]
+}

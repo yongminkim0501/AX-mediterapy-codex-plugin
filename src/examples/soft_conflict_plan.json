@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Meditherapy JP Seeding Test",
+    "objective": "Test Japan market response using the existing female 20s segment."
+  },
+  "market": "JP",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["engagement"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 10000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 7000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "Market is changed from KR to JP while keeping gender and age group constant."
+}

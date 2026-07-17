@@ -1,0 +1,25 @@
+{
+  "campaign": {
+    "name": "Scenario 03 - Macro strategy change",
+    "objective": "Use one macro influencer instead of the historical nano or micro long-tail strategy."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "influencer_tier": "macro",
+  "kpis": ["ROAS", "reach"],
+  "measurement": {
+    "tracking_link": true,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 10000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 9000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "Macro reach can compensate for lower long-tail conversion density."
+}

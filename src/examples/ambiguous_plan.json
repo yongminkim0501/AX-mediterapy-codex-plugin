@@ -1,0 +1,36 @@
+{
+  "campaign": {
+    "name": "Meditherapy Ambiguous Setup",
+    "objective": "Show low-confidence field handling."
+  },
+  "market": {
+    "value": "JP",
+    "confidence": 0.62,
+    "raw_value": "Japan maybe"
+  },
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["roas"],
+  "measurement": {
+    "tracking_link": {
+      "value": true,
+      "confidence": 0.4,
+      "raw_value": "probably tagged"
+    },
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2500000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": {
+    "value": "Test JP market.",
+    "confidence": 0.55,
+    "raw_value": "maybe JP test"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "precedence": ["Blocked", "Revise", "Experiment", "Pass"],
+  "hard_severity_to_status": {
+    "blocked": "Blocked",
+    "revise": "Revise"
+  },
+  "soft_diff_status": "Experiment",
+  "default_status": "Pass"
+}

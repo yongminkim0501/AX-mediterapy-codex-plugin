@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "name": "meditherapy-seeding-review",
+  "version": "0.1.0",
+  "description": "Deterministic review checker for Meditherapy influencer seeding plans.",
+  "author": "codex-competition",
+  "skills": [
+    {
+      "name": "meditherapy-seeding-review",
+      "path": "skills/meditherapy-seeding-review/SKILL.md",
+      "description": "Validate canonical JSON plans, project hard constraints with Z3, and report soft symbol diffs."
+    }
+  ],
+  "entrypoints": {
+    "checker": "checker/check_plan.py"
+  }
+}

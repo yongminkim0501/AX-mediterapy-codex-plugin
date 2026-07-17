@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Scenario 08 - Budget exceeded",
+    "objective": "Run the baseline segment campaign with cost above the approved budget."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["engagement"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 5000000,
+  "is_experiment_plan": false,
+  "experiment_hypothesis": ""
+}

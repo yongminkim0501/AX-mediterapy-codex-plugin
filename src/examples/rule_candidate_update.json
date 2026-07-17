@@ -1,0 +1,10 @@
+{
+  "candidate_type": "hard_constraint",
+  "id": "HC_CREATOR_WHITELIST_REQUIRED",
+  "severity": "revise",
+  "message": "Creators should be checked against the approved campaign whitelist before outreach.",
+  "suggested_fix": "Add an approved_creator_list reference to the plan.",
+  "observed_fields": ["creators", "approved_creator_list"],
+  "status": "candidate_not_active",
+  "notes": "Example only. The MVP checker does not load candidate rule updates."
+}

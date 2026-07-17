@@ -1,0 +1,27 @@
+{
+  "campaign": {
+    "name": "Meditherapy Conversion Push",
+    "objective": "Drive sales without complete measurement setup."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": [
+    "roas",
+    "purchase_conversion"
+  ],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 5000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 9000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": ""
+}

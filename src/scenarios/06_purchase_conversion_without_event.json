@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Scenario 06 - Purchase conversion without event",
+    "objective": "Measure purchase conversion while purchase event tracking is absent."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["purchase_conversion"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": true,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2000000,
+  "is_experiment_plan": false,
+  "experiment_hypothesis": ""
+}

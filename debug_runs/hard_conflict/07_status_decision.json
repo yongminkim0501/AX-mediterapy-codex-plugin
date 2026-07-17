@@ -1,0 +1,22 @@
+{
+  "status": "Blocked",
+  "selected_reason": "HC_ROAS_MEASUREMENT_REQUIRED",
+  "candidates": [
+    {
+      "status": "Blocked",
+      "reason": "HC_ROAS_MEASUREMENT_REQUIRED"
+    },
+    {
+      "status": "Blocked",
+      "reason": "HC_PURCHASE_EVENT_REQUIRED"
+    },
+    {
+      "status": "Blocked",
+      "reason": "HC_PLANNED_COST_WITHIN_BUDGET"
+    },
+    {
+      "status": "Revise",
+      "reason": "HC_EXPERIMENT_HYPOTHESIS_REQUIRED"
+    }
+  ]
+}

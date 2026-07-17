@@ -1,0 +1,8 @@
+{
+  "soft_diff_policy": {
+    "baseline_id": "kr-female-20s-demo-baseline",
+    "fields": ["market", "gender", "age_group"],
+    "classification": "Experiment",
+    "question_template": "Confirm whether changed baseline fields are intentional experiment variables."
+  }
+}

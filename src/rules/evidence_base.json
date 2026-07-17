@@ -1,0 +1,30 @@
+{
+  "evidence_base_version": "2026-06-mvp",
+  "sources": [
+    {
+      "id": "featuring-meditherapy-2026",
+      "url": "https://blog.featuring.co/case-study-campaign-meditherapy-2026",
+      "role": "public_case_reference",
+      "lifecycle": "baseline",
+      "scope": "Meditherapy influencer seeding planning context"
+    }
+  ],
+  "soft_baselines": [
+    {
+      "id": "kr-female-20s-demo-baseline",
+      "role": "demo_soft_insight",
+      "lifecycle": "mvp_fixture",
+      "source": "featuring-meditherapy-2026",
+      "scope": {
+        "brand": "Meditherapy",
+        "channel": "influencer_seeding"
+      },
+      "symbol_set": {
+        "market": "KR",
+        "gender": "female",
+        "age_group": "20s"
+      },
+      "statement": "Demo baseline used to show deterministic soft conflict diffs."
+    }
+  ]
+}

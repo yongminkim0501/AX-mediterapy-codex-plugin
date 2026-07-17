@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Scenario 02 - Female to male segment expansion",
+    "objective": "Test whether the baseline skincare seeding formula extends to male 20s buyers."
+  },
+  "market": "KR",
+  "target": {
+    "gender": "male",
+    "age_group": "20s"
+  },
+  "kpis": ["ROAS"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": true,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2800000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "Male beauty creators can generate purchase intent for skincare."
+}

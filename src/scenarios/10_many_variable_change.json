@@ -1,0 +1,28 @@
+{
+  "campaign": {
+    "name": "Scenario 10 - Many variables changed",
+    "objective": "Move from KR female 20s baseline to TW male 30s with different product and content assumptions."
+  },
+  "market": "TW",
+  "target": {
+    "gender": "male",
+    "age_group": "30s"
+  },
+  "product_category": "device",
+  "influencer_tier": "macro",
+  "content_format": "live",
+  "message_control": "strict_script",
+  "kpis": ["engagement"],
+  "measurement": {
+    "tracking_link": false,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 10000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 9000000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "A new TW male 30s device campaign may reveal a different winning formula."
+}

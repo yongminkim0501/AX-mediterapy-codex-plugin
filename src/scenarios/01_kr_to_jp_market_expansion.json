@@ -1,0 +1,24 @@
+{
+  "campaign": {
+    "name": "Scenario 01 - KR formula to JP market",
+    "objective": "Apply the KR female 20s baseline to JP female 20s while keeping KPI measurement ready."
+  },
+  "market": "JP",
+  "target": {
+    "gender": "female",
+    "age_group": "20s"
+  },
+  "kpis": ["ROAS"],
+  "measurement": {
+    "tracking_link": true,
+    "coupon_code": false,
+    "purchase_event": false
+  },
+  "budget": {
+    "limit": 3000000,
+    "currency": "KRW"
+  },
+  "planned_cost": 2500000,
+  "is_experiment_plan": true,
+  "experiment_hypothesis": "Japan market can reuse the KR female 20s seeding formula."
+}
