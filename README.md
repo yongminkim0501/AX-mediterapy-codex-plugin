@@ -87,5 +87,8 @@ Hard 결과(UNSAT/SAT) + Soft diff 결과를 하나의 상태로 수렴
 Hard는 Z3로 엄밀히 / Soft는 diff로 유연히 -> 성격 다른 판정을 다른 엔진에 위임
 예측·랭킹·LLM 판단 배제 + rule id 추적 -> 모든 판정이 설명 가능(explainable)
 
+<**증빙자료**>
+![스크린샷](image.png)
+
 
 
